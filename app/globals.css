@@ -10,33 +10,33 @@ body {
 }
 
 .a {
-  top: 120px;
-  left: 70px;
+  top: 40%;
+  left: 8%;
 }
 
 .b {
-  top: 120px;
-  left: 270px;
+  top: 40%;
+  left: 65%;
 }
 
 .c {
-  top: 300px;
-  left: 200px;
+  top: 93%;
+  left: 47%;
 }
 
 .C {
-  top: 35px;
-  left: 140px;
+  top: 15%;
+  left: 27%;
 }
 
 .B {
-  top: 250px;
-  left: 90px;
+  top: 80%;
+  left: 12%;
 }
 
 .A {
-  top: 250px;
-  left: 300px;
+  top: 80%;
+  left: 73%;
 }
 
 form {
