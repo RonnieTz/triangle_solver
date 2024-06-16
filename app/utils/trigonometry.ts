@@ -126,6 +126,33 @@ export const triangle = ({
     const { A, B, c } = triangle_2_sides_and_angle_between_them(a, b, C);
     return { a, b, c, A, B, C };
   }
+  if (a && c && A) {
+    const {
+      c: _b,
+      B: _C,
+      C: _B,
+    } = triangle_2_sides_and_opposite_angle(a, c, A);
+
+    return { a, b: _b, c, A, B: _B, C: _C };
+  }
+  if (a && c && B) {
+    const {
+      c: _b,
+      B: _C,
+      A: _B,
+    } = triangle_2_sides_and_angle_between_them(a, c, B);
+
+    return { a, b: _b, c, A: _B, B, C: _C };
+  }
+  if (a && c && C) {
+    const {
+      c: _b,
+      B: _A,
+      C: _B,
+    } = triangle_2_sides_and_opposite_angle(c, a, C);
+
+    return { a, b: _b, c, A: _A, B: _B, C };
+  }
   if (b && c && A) {
     const {
       B: _C,

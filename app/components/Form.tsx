@@ -113,13 +113,14 @@ const Form = () => {
       </label>
       <button>Submit</button>
       <button
+        type="button"
         onClick={() => {
-          set_a(undefined);
-          set_b(undefined);
-          set_c(undefined);
-          setA(undefined);
-          setB(undefined);
-          setC(undefined);
+          set_a(0);
+          set_b(0);
+          set_c(0);
+          setA(0);
+          setB(0);
+          setC(0);
         }}
       >
         Reset
