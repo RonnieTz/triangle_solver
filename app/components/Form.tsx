@@ -2,13 +2,22 @@
 import { useState } from 'react';
 import { triangle } from '../utils/trigonometry';
 
-const Form = () => {
+type Props = {
+  A_ref: React.RefObject<HTMLInputElement>;
+  B_ref: React.RefObject<HTMLInputElement>;
+  C_ref: React.RefObject<HTMLInputElement>;
+  a_ref: React.RefObject<HTMLInputElement>;
+  b_ref: React.RefObject<HTMLInputElement>;
+  c_ref: React.RefObject<HTMLInputElement>;
+};
+
+const Form = ({ A_ref, B_ref, C_ref, a_ref, b_ref, c_ref }: Props) => {
   const [a, set_a] = useState<number | undefined>(undefined);
   const [b, set_b] = useState<number | undefined>(undefined);
   const [c, set_c] = useState<number | undefined>(undefined);
   const [A, setA] = useState<number | undefined>(undefined);
   const [B, setB] = useState<number | undefined>(undefined);
-  const [C, setC] = useState<number | undefined>(undefined);
+  const [C, setC] = useState<number | undefined>(90);
 
   const inputsUsed = [a, b, c, A, B, C].filter((input) => input! > 0).length;
 
@@ -30,6 +39,7 @@ const Form = () => {
       <label>
         a:
         <input
+          ref={a_ref}
           onChange={(e) => {
             if (e.target.valueAsNumber) {
               set_a(e.target.valueAsNumber);
@@ -44,6 +54,7 @@ const Form = () => {
       <label>
         b:
         <input
+          ref={b_ref}
           onChange={(e) => {
             if (e.target.valueAsNumber) {
               set_b(e.target.valueAsNumber);
@@ -58,6 +69,7 @@ const Form = () => {
       <label>
         c:
         <input
+          ref={c_ref}
           onChange={(e) => {
             if (e.target.valueAsNumber) {
               set_c(e.target.valueAsNumber);
@@ -72,6 +84,7 @@ const Form = () => {
       <label>
         A:
         <input
+          ref={A_ref}
           onChange={(e) => {
             if (e.target.valueAsNumber) {
               setA(e.target.valueAsNumber);
@@ -86,6 +99,7 @@ const Form = () => {
       <label>
         B:
         <input
+          ref={B_ref}
           onChange={(e) => {
             if (e.target.valueAsNumber) {
               setB(e.target.valueAsNumber);
@@ -100,6 +114,7 @@ const Form = () => {
       <label>
         C:
         <input
+          ref={C_ref}
           onChange={(e) => {
             if (e.target.valueAsNumber) {
               setC(e.target.valueAsNumber);
